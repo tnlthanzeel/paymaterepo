@@ -78,9 +78,12 @@
 										<label class="login-form" for="password" >Password</label><br/>
 										<input type="password"  class="form-password form-control"  id="password" runat="server" required/>
 									</div>
-								<center>	<asp:Label ID="loginerror"  runat="server" Text="Incorrect user name or password " ForeColor="red" ></asp:Label><br/>
-                                    <asp:Label ID="userblocked"  runat="server" Text="user Blocked " ForeColor="red" CssClass="label-dangers" ></asp:Label>
-								</center>
+									<div style="text-align:center">
+										<asp:Label ID="loginerror"  runat="server" Text="Incorrect user name or password " ForeColor="red" ></asp:Label>
+									<asp:Label ID="userblocked"  runat="server" Text="user Blocked " ForeColor="red" CssClass="label-dangers" ></asp:Label>
+							
+									</div>
+									
 								<table>
 									<tr>
 									

@@ -13,5 +13,17 @@ namespace test
         {
 
         }
+
+        
+
+        protected void btnreg_Click(object sender, EventArgs e)
+        {
+            string useremail = emailId.Value.ToString();
+
+
+
+
+            Response.Redirect("home.aspx");
+        }
     }
 }

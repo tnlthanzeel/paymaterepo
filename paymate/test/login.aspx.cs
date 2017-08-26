@@ -1,12 +1,14 @@
 ﻿using System;
+using System.Configuration;
 
 namespace test
 {
     public partial class login : System.Web.UI.Page
     {
-
+        private string conString = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+            conString = ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
             loginerror.Visible = false;
         }
 

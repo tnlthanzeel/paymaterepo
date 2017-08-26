@@ -256,6 +256,7 @@
     <Content Include="assets\font-awesome\scss\_rotated-flipped.scss" />
     <Content Include="assets\font-awesome\scss\_stacked.scss" />
     <Content Include="assets\font-awesome\scss\_variables.scss" />
+    <Content Include="Adminview.aspx" />
     <None Include="Properties\PublishProfiles\Paymate - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="home.aspx" />
@@ -362,6 +363,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Adminview.aspx.cs">
+      <DependentUpon>Adminview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adminview.aspx.designer.cs">
+      <DependentUpon>Adminview.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

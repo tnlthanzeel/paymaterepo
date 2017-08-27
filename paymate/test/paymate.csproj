@@ -183,6 +183,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Adminview.aspx" />
     <Content Include="assets\bootstrap\css\bootstrap-theme.css" />
     <Content Include="assets\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="assets\bootstrap\css\bootstrap.css" />
@@ -256,7 +257,6 @@
     <Content Include="assets\font-awesome\scss\_rotated-flipped.scss" />
     <Content Include="assets\font-awesome\scss\_stacked.scss" />
     <Content Include="assets\font-awesome\scss\_variables.scss" />
-    <Content Include="Adminview.aspx" />
     <None Include="Properties\PublishProfiles\Paymate - Web Deploy.pubxml" />
     <Content Include="home.aspx" />
     <Content Include="Content\img\header.jpg" />
@@ -325,6 +325,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adminview.aspx.cs">
+      <DependentUpon>Adminview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adminview.aspx.designer.cs">
+      <DependentUpon>Adminview.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -376,13 +383,6 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Adminview.aspx.cs">
-      <DependentUpon>Adminview.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Adminview.aspx.designer.cs">
-      <DependentUpon>Adminview.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

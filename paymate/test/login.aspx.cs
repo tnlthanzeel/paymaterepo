@@ -31,12 +31,13 @@ namespace test
             if (rdr.Read())
             {
 
-               string uname= rdr[0].ToString();
+                string uname= rdr[0].ToString();
                 string upwd= rdr[1].ToString();
                 int userrole = Convert.ToInt16(rdr[2]);
                 int blockstat = Convert.ToInt16(rdr[3]);
+                var cusname = rdr[4].ToString();
 
-                
+                Session["loggedinas"] = cusname;
 
                 if (pwd.Equals(upwd) && username.Equals(uname) && userrole==1) // if userrole is 1, that user is an admin
                 {

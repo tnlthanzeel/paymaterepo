@@ -7,11 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace test
-{
-
-
-    public partial class Bankbalance
-    {
+namespace test {
+    
+    
+    public partial class Bankbalance {
     }
 }

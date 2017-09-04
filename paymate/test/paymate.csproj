@@ -210,6 +210,7 @@
     <Content Include="assets\js\jquery.backstretch.min.js" />
     <Content Include="assets\js\placeholder.js" />
     <Content Include="assets\js\scripts.js" />
+    <Content Include="Bankbalance.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -336,6 +337,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Bankbalance.aspx.cs">
+      <DependentUpon>Bankbalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bankbalance.aspx.designer.cs">
+      <DependentUpon>Bankbalance.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

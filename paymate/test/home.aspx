@@ -70,7 +70,7 @@
          <div class="a">
     <div class="b">          
         <div class="tile amarelo bank">
-<a  href="javascript:;">
+<a  href="Bankbalance.aspx">
     <img src="https://www.bankatfirstnational.com/8BASE/media/images/base/icon-checking.png"  width="100" height="100" <%--style="width:310px;height:310px;"--%> />
     <br />
     View Bank Balance
@@ -86,7 +86,7 @@
         </div>
         <div class="tile azul hotel">
 <a  href="javascript:;">
-    <%--<img src="" width="100" height="100"/>--%>
+   
 <img src="assets/img/hotel-icon-blue.jpg" width="100" height="100"/><br />
     
     Hotel Reservations

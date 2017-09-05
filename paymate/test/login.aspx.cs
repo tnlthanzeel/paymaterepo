@@ -8,6 +8,7 @@ namespace test
     public partial class login : System.Web.UI.Page
     {
         Customer c = new Customer();
+        Admin admin = new Admin();
         private string conString = "";
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -49,7 +50,7 @@ namespace test
 
                 if (pwd.Equals(upwd) && username.Equals(uname) && userrole == 1) // if userrole is 1, that user is an admin
                 {
-
+                    bool result = admin.login();
                     Response.Redirect("Adminview.aspx");
 
                 }

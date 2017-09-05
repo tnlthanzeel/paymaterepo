@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using test.Models;
 
 namespace test
 {
@@ -14,16 +15,30 @@ namespace test
 
         }
 
-        
+
 
         protected void btnreg_Click(object sender, EventArgs e)
         {
-            string useremail = emailId.Value.ToString();
 
 
+            Customer customer = new Customer()
+            {
+                CusName = name.Value.ToString(),
+                CusId = emailId.Value.ToString(),
+                CardNumber = Convert.ToInt64(cardno.Value.ToString()),
+                CardType = Request.Form["cardtype"].ToString(),
+                CusAddress = address.Value.ToString(),
+                CusBlockStat = 0,
+                CusNic = nicnumber.Value.ToString(),
+                CusPhone = mobilenumber.Value.ToString(),
+                CusPwd= passwordinput.Value.ToString()
 
 
-            Response.Redirect("home.aspx");
+            };
+
+            customer.cregister(customer);
+            Session["loggedinas"] = customer.CusName;
+             Response.Redirect("home.aspx");
         }
     }
 }

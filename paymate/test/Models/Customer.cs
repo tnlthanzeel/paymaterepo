@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace test.Models
+{
+    public class Customer
+    {
+        public string CusId { get; set; }
+        public string  CusPwd { get; set; }
+        public int CusBlockStat { get; set; }
+        public string CusName { get; set; }
+        public string CusNic { get; set; }
+        public string CusPhone { get; set; }
+        public string CusAddress { get; set; }
+        public string CardType { get; set; }
+        public long CardNumber { get; set; }
+        
+    }
+}

@@ -12,7 +12,7 @@ namespace test
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            useravailable.Visible = false;
         }
 
 
@@ -25,20 +25,28 @@ namespace test
             {
                 CusName = name.Value.ToString(),
                 CusId = emailId.Value.ToString(),
-                CardNumber = Convert.ToInt64(cardno.Value.ToString()),
+                CardNumber = cardno.Value.ToString(),
                 CardType = Request.Form["cardtype"].ToString(),
                 CusAddress = address.Value.ToString(),
                 CusBlockStat = 0,
                 CusNic = nicnumber.Value.ToString(),
                 CusPhone = mobilenumber.Value.ToString(),
-                CusPwd= passwordinput.Value.ToString()
+                CusPwd = passwordinput.Value.ToString()
 
 
             };
 
-            customer.cregister(customer);
-            Session["loggedinas"] = customer.CusName;
-             Response.Redirect("home.aspx");
+            int regresult = customer.cregister(customer);
+
+            if (regresult == 0)
+            {
+                Session["loggedinas"] = customer.CusName;
+                Response.Redirect("home.aspx");
+            }
+
+
+            else
+                useravailable.Visible = true;
         }
     }
 }

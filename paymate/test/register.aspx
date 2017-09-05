@@ -6,6 +6,11 @@
 <head runat="server">
     <title>Registration</title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="assets/ico/pm.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/72.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/57.png">
 </head>
 <body>
     <div class="container">
@@ -30,7 +35,7 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="emailId">User Email</label>
                         <div class="col-md-6">
-                            <input id="emailId" name="emailId" type="text" runat="server" placeholder="paymate@something.com" class="form-control input-md" required="" />
+                            <input id="emailId" name="emailId" type="text" runat="server" placeholder="paymate@something.com" class="form-control input-md" required="" /><asp:Label ID="useravailable" runat="server" Text="This email address is already taken" ForeColor="red"></asp:Label>
 
                         </div>
                     </div>
@@ -39,7 +44,7 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="passwordinput">Password</label>
                         <div class="col-md-5">
-                            <input id="passwordinput" name="passwordinput" type="password" placeholder="" class="form-control input-md" required="" runat="server"/>
+                            <input id="passwordinput" name="passwordinput" type="password" placeholder="" class="form-control input-md" required="" runat="server" />
                         </div>
                     </div>
 
@@ -50,11 +55,11 @@
                         <label class="col-md-4 control-label" for="cardtype">Card Type</label>
                         <div class="col-md-4">
                             <label class="radio-inline" for="cardtypevisa">
-                                <input  type="radio" name="cardtype" id="cardtypevisa" value="Visa"  required="required" runat="server" />
+                                <input type="radio" name="cardtype" id="cardtypevisa" value="Visa" required="required" runat="server" />
                                 Visa
                             </label>
                             <label class="radio-inline" for="cardtypemastro">
-                                <input type="radio"  name="cardtype" id="cardtypemastro" value="Mastro" required="required" runat="server" />
+                                <input type="radio" name="cardtype" id="cardtypemastro" value="Mastro" required="required" runat="server" />
                                 Mastro
                             </label>
                         </div>
@@ -64,7 +69,7 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="emailId">Card Number</label>
                         <div class="col-md-6">
-                            <input id="cardno" name="cardno" type="number" runat="server"  class="form-control input-md" required="required" />
+                            <input id="cardno" name="cardno" type="number" runat="server" class="form-control input-md" required="required" />
 
                         </div>
                     </div>
@@ -79,7 +84,7 @@
                         </div>
                     </div>
 
-                   <div class="form-group">
+                    <div class="form-group">
                         <label class="col-md-4 control-label" for="mobilenumber">Address</label>
                         <div class="col-md-5">
                             <%--<input id="address" name="mobilenumber" type="text" placeholder="Mobile Number" class="form-control input-md" required="" />--%>

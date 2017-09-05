@@ -30,10 +30,6 @@ namespace test
             con.Open();
             SqlDataReader rdr = cmd.ExecuteReader();
 
-
-
-
-
             if (rdr.Read())
             {
 

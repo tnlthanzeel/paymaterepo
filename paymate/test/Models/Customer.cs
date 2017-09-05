@@ -16,6 +16,58 @@ namespace test.Models
         public string CusAddress { get; set; }
         public string CardType { get; set; }
         public long CardNumber { get; set; }
+
+
+        public void cregister()
+        {
+
+        }
+
+
+        public bool clogin()
+        {
+            return true;
+        }
+
+
+        public void pay()
+        { }
+
+        public void viewBbal()
+        { }
+
+        public void fundtransfer()
+        { }
+
+
+        public void viewhotel()
+        { }
+
+        public void reserveroom()
+        {
+
+        }
+
+
+        public void cancelreservation()
+        { }
+
+
+        public void pbill()
+        {
+
+        }
+
+        public void cbill()
+        { }
         
+        public void wbill()
+        { }
+
+        public void insurance()
+        { }
+
+        public void viewTranslog()
+        { }
     }
 }

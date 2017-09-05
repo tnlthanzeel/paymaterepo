@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Configuration;
 using System.Data.SqlClient;
+using test.Models;
 
 namespace test
 {
     public partial class login : System.Web.UI.Page
     {
+        Customer c = new Customer();
         private string conString = "";
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -28,6 +30,9 @@ namespace test
             SqlDataReader rdr = cmd.ExecuteReader();
 
 
+
+
+
             if (rdr.Read())
             {
 
@@ -36,6 +41,9 @@ namespace test
                 int userrole = Convert.ToInt16(rdr[2]);
                 int blockstat = Convert.ToInt16(rdr[3]);
                 var cusname = rdr[4].ToString();
+
+
+
 
                 Session["loggedinas"] = cusname;
 
@@ -48,8 +56,9 @@ namespace test
 
                 else if (pwd.Equals(upwd) && username.Equals(uname) && userrole == 2 && blockstat == 0) //if userrole is 2, that user is an profile user, and if blockstat is 0 the customer is not blocked by the admin
                 {
-
-                    Response.Redirect("home.aspx");
+                    bool result = c.clogin();
+                    if (result == true)
+                        Response.Redirect("home.aspx");
 
                 }
 

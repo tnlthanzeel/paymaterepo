@@ -31,13 +31,11 @@
 	<title>PAYmate</title>
 </head>
 
-<body style="background-image: url(assets/img/adminlogged.png);">
+<body style="background-image: url(assets/img/adminlogged.png); ">
 	<form id="form1" runat="server">
-		<div>
-			<a href="login.aspx">
-				<img src="assets/img/backgrounds/logout.png" /></a> Logged in as
-			<asp:Label ID="loggedinas" runat="server" CssClass="text-primary text-uppercase" Font-Bold="true"></asp:Label>
-		</div>
+	<div>
+	   <a href="login.aspx"><img src="assets/img/backgrounds/logout.png"/></a> Logged in as <asp:Label ID="loggedinas" runat="server" CssClass="text-primary text-uppercase" Font-Bold="true"></asp:Label>
+	</div>
 	</form>
 </body>
 </html>

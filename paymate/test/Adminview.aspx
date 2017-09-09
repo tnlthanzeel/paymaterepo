@@ -29,13 +29,20 @@
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/72.png" />
 	<link rel="apple-touch-icon-precomposed" href="assets/ico/57.png" />
 	<title>PAYmate</title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 54px;
+        }
+    </style>
 </head>
 
 <body style="background-image: url(assets/img/adminlogged.png); ">
 	<form id="form1" runat="server">
 	<div>
-	   <a href="login.aspx"><img src="assets/img/backgrounds/logout.png"/></a> Logged in as <asp:Label ID="loggedinas" runat="server" CssClass="text-primary text-uppercase" Font-Bold="true"></asp:Label>
+	   <a href="login.aspx"><img src="assets/img/backgrounds/logout.png" width="90" height="90"/></a> Logged in as <asp:Label ID="loggedinas" runat="server" CssClass="text-primary text-uppercase" Font-Bold="true"></asp:Label>
 	</div>
+		<br />
+		
 	</form>
 </body>
 </html>

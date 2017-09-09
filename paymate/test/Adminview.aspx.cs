@@ -11,7 +11,11 @@ namespace test
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            loggedinas.Text= Session["loggedinas"].ToString();
+            loggedinas.Text = Session["loggedinas"].ToString();
         }
+
+
+       
+
     }
 }

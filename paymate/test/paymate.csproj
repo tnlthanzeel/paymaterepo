@@ -240,8 +240,10 @@
     <Content Include="assets\ico\57.png" />
     <Content Include="assets\ico\72.png" />
     <Content Include="assets\ico\pm.png" />
+    <Content Include="assets\img\adminlogged.png" />
     <Content Include="assets\img\backgrounds\1%402x.jpg" />
     <Content Include="assets\img\backgrounds\1.jpg" />
+    <Content Include="assets\img\backgrounds\logout.png" />
     <Content Include="assets\img\hotel-icon-blue.jpg" />
     <Content Include="assets\js\jquery-1.11.1.js" />
     <Content Include="assets\js\jquery-1.11.1.min.js" />

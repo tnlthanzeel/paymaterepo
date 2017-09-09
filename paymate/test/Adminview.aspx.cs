@@ -14,8 +14,9 @@ namespace test
             loggedinas.Text = Session["loggedinas"].ToString();
         }
 
-
-       
-
+        protected void loaddetails_Click(object sender, EventArgs e)
+        {
+            Response.Write("loading table");
+        }
     }
 }

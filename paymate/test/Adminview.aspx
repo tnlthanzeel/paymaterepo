@@ -36,7 +36,7 @@
         <div>
             <a href="login.aspx">
                 <img src="assets/img/backgrounds/logout.png" width="90" height="90" /></a> Logged in as
-            <asp:Label ID="loggedinas" runat="server" CssClass="text-primary text-uppercase " Font-Bold="true"></asp:Label>
+            <asp:Label ID="loggedinas" runat="server" CssClass="text-uppercase" ForeColor="#0000ff" Font-Bold="true"></asp:Label>
         </div>
         <br />
         &nbsp;&nbsp;&nbsp;<asp:Button ID="loaddetails" runat="server" Text="Load Details" CssClass="btn btn-success" Style="width: auto;" OnClick="loaddetails_Click" />

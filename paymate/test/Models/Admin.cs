@@ -43,30 +43,74 @@ namespace test.Models
             return td;
         }
 
-        public DataTable viewuser()
+        public DataTable viewuser(string cusid)
         {
             conString = System.Configuration.ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
             SqlConnection con = new SqlConnection(conString);
 
 
-            SqlCommand cmd = new SqlCommand("select * from customer", con);
+            SqlCommand cmd = new SqlCommand("select * from customer where dcusid='"+cusid+"'", con);
             con.Open();
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
             DataTable td = new DataTable();
 
             ad.Fill(td);
             con.Close();
+            cmd.Dispose();
+            ad.Dispose();
             return td;
 
 
 
         }
 
-        public void buser()
-        { }
+        public DataTable buser(string cusid)
+        {
+            conString = System.Configuration.ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
+            SqlConnection con = new SqlConnection(conString);
 
-        public void ubluser()
-        { }
+
+            SqlCommand cmd = new SqlCommand("update customer set dcusblockstat=1 where dcusid='" + cusid + "'", con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            cmd = new SqlCommand("select * from customer where dcusid='" + cusid + "'", con);
+            con.Open();
+            SqlDataAdapter ad = new SqlDataAdapter(cmd);
+            DataTable td = new DataTable();
+
+            ad.Fill(td);
+            con.Close();
+            cmd.Dispose();
+            ad.Dispose();
+            return td;
+
+
+        }
+
+        public DataTable ubluser(string cusid)
+        {
+            conString = System.Configuration.ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
+            SqlConnection con = new SqlConnection(conString);
+
+
+            SqlCommand cmd = new SqlCommand("update customer set dcusblockstat=0 where dcusid='" + cusid + "'", con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            cmd = new SqlCommand("select * from customer where dcusid='" + cusid + "'", con);
+            con.Open();
+            SqlDataAdapter ad = new SqlDataAdapter(cmd);
+            DataTable td = new DataTable();
+
+            ad.Fill(td);
+            con.Close();
+            cmd.Dispose();
+            ad.Dispose();
+            return td;
+
+
+        }
 
         public void viewblist()
         { }

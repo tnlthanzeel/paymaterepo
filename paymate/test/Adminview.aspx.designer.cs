@@ -58,6 +58,51 @@ namespace test {
         protected global::System.Web.UI.WebControls.Button search;
         
         /// <summary>
+        /// blockuser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button blockuser;
+        
+        /// <summary>
+        /// unblockuser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button unblockuser;
+        
+        /// <summary>
+        /// norecord control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label norecord;
+        
+        /// <summary>
+        /// blocked control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label blocked;
+        
+        /// <summary>
+        /// unblocked control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label unblocked;
+        
+        /// <summary>
         /// customerdetails control.
         /// </summary>
         /// <remarks>

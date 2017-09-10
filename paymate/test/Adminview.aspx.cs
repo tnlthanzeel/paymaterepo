@@ -14,6 +14,11 @@ namespace test
         protected void Page_Load(object sender, EventArgs e)
         {
             loggedinas.Text = Session["loggedinas"].ToString();
+            norecord.Visible = false;
+            customerdetails.Visible = false;
+            blocked.Visible = false;
+            unblocked.Visible = false;
+
         }
 
         protected void loaddetails_Click(object sender, EventArgs e)
@@ -23,16 +28,72 @@ namespace test
             var dt = admin.viewcusdetail();
             customerdetails.DataSource = dt;
             customerdetails.DataBind();
+            customerdetails.Visible = true;
 
 
         }
 
         protected void search_Click(object sender, EventArgs e)
         {
-            var cusid = cusidd.Text;
+
             Admin admin = new Admin();
 
-            
+            var dt = admin.viewuser(cusidd.Text);
+
+
+            if (dt.Rows.Count == 0)
+            {
+                norecord.Visible = true;
+            }
+
+            else
+            {
+                customerdetails.Visible = true;
+                customerdetails.DataSource = dt;
+                customerdetails.DataBind();
+                dt.Dispose();
+
+            }
+        }
+
+        protected void blockuser_Click(object sender, EventArgs e)
+        {
+            Admin admin = new Admin();
+            var dt = admin.buser(cusidd.Text);
+            if (dt.Rows.Count == 0)
+            {
+                norecord.Visible = true;
+            }
+
+            else
+            {
+                customerdetails.Visible = true;
+                customerdetails.DataSource = dt;
+                customerdetails.DataBind();
+                dt.Dispose();
+                blocked.Visible = true;
+
+            }
+
+        }
+
+        protected void unblockuser_Click(object sender, EventArgs e)
+        {
+            Admin admin = new Admin();
+            var dt = admin.ubluser(cusidd.Text);
+            if (dt.Rows.Count == 0)
+            {
+                norecord.Visible = true;
+            }
+
+            else
+            {
+                customerdetails.Visible = true;
+                customerdetails.DataSource = dt;
+                customerdetails.DataBind();
+                dt.Dispose();
+                unblocked.Visible = true;
+            }
         }
     }
 }

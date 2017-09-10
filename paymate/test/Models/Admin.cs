@@ -33,7 +33,7 @@ namespace test.Models
             SqlConnection con = new SqlConnection(conString);
 
 
-            SqlCommand cmd = new SqlCommand("select * from customer", con);
+            SqlCommand cmd = new SqlCommand("select * from customer where duserrole=2", con);
             con.Open();
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
             DataTable td = new DataTable();

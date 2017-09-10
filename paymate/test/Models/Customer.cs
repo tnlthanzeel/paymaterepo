@@ -56,8 +56,12 @@ namespace test.Models
         public void pay()
         { }
 
-        public void viewBbal()
-        { }
+        public BankAccount viewBbal(string cusid)
+        {
+            BankAccount bankaccount = new BankAccount();
+            return bankaccount.viewbbal(cusid);
+
+        }
 
         public void fundtransfer()
         { }

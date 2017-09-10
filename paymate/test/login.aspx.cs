@@ -41,7 +41,7 @@ namespace test
 
 
 
-
+                Session["cusid"] = uname;
                 Session["loggedinas"] = cusname;
 
                 if (pwd.Equals(upwd) && username.Equals(uname) && userrole == 1) // if userrole is 1, that user is an admin

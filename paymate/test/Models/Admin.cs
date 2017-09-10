@@ -49,7 +49,7 @@ namespace test.Models
             SqlConnection con = new SqlConnection(conString);
 
 
-            SqlCommand cmd = new SqlCommand("select * from customer where dcusid='"+cusid+"'", con);
+            SqlCommand cmd = new SqlCommand("select * from customer where dcusid='" + cusid + "'", con);
             con.Open();
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
             DataTable td = new DataTable();

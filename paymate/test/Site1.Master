@@ -61,7 +61,7 @@
 									<a class="page-scroll" href="About.aspx">About</a>
 								</li>
 								<li>
-									<a class="page-scroll" href="#services">Services</a>
+									<a class="page-scroll" href="Myposition.aspx">My Position</a>
 								</li>
 
 								<li>
@@ -90,9 +90,12 @@
 		<br />
 		<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 		</asp:ContentPlaceHolder>
+		
 
 	</header>
+<asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
 
+</asp:ContentPlaceHolder>
 	<!-- jQuery -->
 	<script src="~/Content/vendor/jquery/jquery.min.js"></script>
 
@@ -106,6 +109,7 @@
 
 	<!-- Theme JavaScript -->
 	<script src="~/Content/js/creative.min.js"></script>
+	
 </body>
 </html>
 

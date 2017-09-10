@@ -2,71 +2,63 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-   
-   
-	<style type="text/css">
 
 
-   
- 
-.a{
-	width:auto;
-	height:auto;   
-	color: blue;  
-}
- 
-.b{
-	width:auto;
-	padding:5px;
-	height:auto;
-	display:table; 
-	color: blue;  
-	 
-		 
-}
+    <style type="text/css">
+        .a {
+            width: auto;
+            height: auto;
+            color: blue;
+        }
 
-.tile{
-	height:200px;   
-	width:250px;  
-	float:left;
-	margin:0 5px 0 0;
-	padding:2px;
-}
- 
+        .b {
+            width: auto;
+            padding: 5px;
+            height: auto;
+            display: table;
+            color: blue;
+        }
+
+        .tile {
+            height: 200px;
+            width: 250px;
+            float: left;
+            margin: 0 5px 0 0;
+            padding: 2px;
+        }
 
 
-.amarelo{
-	background:transparent; 
-}
- 
-.vermelho{
-	 background:transparent; 
-}
-}
- 
-.azul{
-	background:transparent; 
-}
 
- 
-.verde{
-	 background:transparent; 
-}
+        .amarelo {
+            background: transparent;
+        }
+
+        .vermelho {
+            background: transparent;
+        }
+
+        }
+
+        .azul {
+            background: transparent;
+        }
 
 
-		
-.wrap {
-   overflow: hidden;
-   margin: 10px;
-}
- 
+        .verde {
+            background: transparent;
+        }
 
 
-</style>
+
+        .wrap {
+            overflow: hidden;
+            margin: 10px;
+        }
+    </style>
 
 
-	<h2 style="text-align:left">Home  </h2>
-  <center>
+    <h2 style="text-align: left">Home  </h2>
+    <center>
 		 <div class="a">
 	<div class="b">          
 		<div class="tile amarelo bank">
@@ -124,6 +116,6 @@
 	   </div>
 	</div>       
 </div>
-	  </center>     
+	  </center>
 
 </asp:Content>

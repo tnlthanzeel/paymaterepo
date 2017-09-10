@@ -349,6 +349,7 @@
     <Content Include="Content\vendor\scrollreveal\scrollreveal.min.js" />
     <Content Include="home.aspx" />
     <Content Include="login.aspx" />
+    <Content Include="Myposition.aspx" />
     <Content Include="register.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -443,6 +444,13 @@
     <Compile Include="Models\Reservations.cs" />
     <Compile Include="Models\Telephone.cs" />
     <Compile Include="Models\Water.cs" />
+    <Compile Include="Myposition.aspx.cs">
+      <DependentUpon>Myposition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Myposition.aspx.designer.cs">
+      <DependentUpon>Myposition.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="register.aspx.cs">
       <DependentUpon>register.aspx</DependentUpon>

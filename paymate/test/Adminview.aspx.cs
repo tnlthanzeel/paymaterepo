@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using test.Models;
 
 namespace test
 {
@@ -16,7 +18,21 @@ namespace test
 
         protected void loaddetails_Click(object sender, EventArgs e)
         {
-            Response.Write("loading table");
+            Admin admin = new Admin();
+
+            var dt = admin.viewcusdetail();
+            customerdetails.DataSource = dt;
+            customerdetails.DataBind();
+
+
+        }
+
+        protected void search_Click(object sender, EventArgs e)
+        {
+            var cusid = cusidd.Text;
+            Admin admin = new Admin();
+
+            
         }
     }
 }

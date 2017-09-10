@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -7,7 +9,7 @@ namespace test.Models
 {
     public class Admin
     {
-        public string  adminId { get; set; }
+        public string adminId { get; set; }
         public string adminpasswrod { get; set; }
         public string cusid { get; set; }
         public int bstate { get; set; }
@@ -18,19 +20,47 @@ namespace test.Models
         public string debitcardtype { get; set; }
         public string debitcardno { get; set; }
         public string cusin { get; set; }
+        public string conString = "";
 
         public bool login()
         {
             return true;
         }
 
-        public   void   viewcusdetail()
+        public DataTable viewcusdetail()
         {
+            conString = System.Configuration.ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
+            SqlConnection con = new SqlConnection(conString);
 
+
+            SqlCommand cmd = new SqlCommand("select * from customer", con);
+            con.Open();
+            SqlDataAdapter ad = new SqlDataAdapter(cmd);
+            DataTable td = new DataTable();
+
+            ad.Fill(td);
+            con.Close();
+            return td;
         }
 
-        public void viewuser()
-        { }
+        public DataTable viewuser()
+        {
+            conString = System.Configuration.ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
+            SqlConnection con = new SqlConnection(conString);
+
+
+            SqlCommand cmd = new SqlCommand("select * from customer", con);
+            con.Open();
+            SqlDataAdapter ad = new SqlDataAdapter(cmd);
+            DataTable td = new DataTable();
+
+            ad.Fill(td);
+            con.Close();
+            return td;
+
+
+
+        }
 
         public void buser()
         { }
@@ -43,7 +73,7 @@ namespace test.Models
 
 
         public void addservices()
-        {}
+        { }
 
         public void removeservices()
         { }

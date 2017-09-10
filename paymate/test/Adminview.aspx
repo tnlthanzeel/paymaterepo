@@ -29,24 +29,35 @@
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/72.png" />
 	<link rel="apple-touch-icon-precomposed" href="assets/ico/57.png" />
 	<title>PAYmate</title>
-	<style type="text/css">
-		.auto-style1 {
-			width: 54px;
-		}
-	</style>
 </head>
 
-<body style="background-image: url(assets/img/adminlogged.png); ">
+<body style="background-image: url(assets/img/adminlogged.png);">
 	<form id="form1" runat="server">
-	<div>
-	   <a href="login.aspx"><img src="assets/img/backgrounds/logout.png" width="90" height="90"/></a> Logged in as <asp:Label ID="loggedinas" runat="server" CssClass="text-primary text-uppercase "  Font-Bold="true"></asp:Label>
-	</div>
-		<br />  
-		&nbsp;&nbsp;&nbsp;<asp:Button ID="loaddetails" runat="server" Text="Load Details" CssClass="btn btn-success" style="width:auto;" OnClick="loaddetails_Click" />
+		<div>
+			<a href="login.aspx">
+				<img src="assets/img/backgrounds/logout.png" width="90" height="90" /></a> Logged in as
+			<asp:Label ID="loggedinas" runat="server" CssClass="text-primary text-uppercase " Font-Bold="true"></asp:Label>
+		</div>
+		<br />
+		&nbsp;&nbsp;&nbsp;<asp:Button ID="loaddetails" runat="server" Text="Load Details" CssClass="btn btn-success" Style="width: auto;" OnClick="loaddetails_Click" />
+		<br /><br />
+	   &nbsp;&nbsp; Enter Customer Id <asp:TextBox ID="cusidd" runat="server"  Width="200"></asp:TextBox>&nbsp;&nbsp;<asp:Button ID="search" runat="server" Text="Search" CssClass="btn btn-primary" OnClick="search_Click"/>
 		
-		
+		<br /><br />
+		<center><asp:GridView ID="customerdetails" runat="server" CssClass="table table-hover" CellPadding="4" ForeColor="#333333" GridLines="None" >
+			<AlternatingRowStyle BackColor="White" />
+			<EditRowStyle BackColor="#2461BF" />
+			<FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+			<HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+			<PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+			<RowStyle BackColor="#EFF3FB" />
+			<SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+			<SortedAscendingCellStyle BackColor="#F5F7FB" />
+			<SortedAscendingHeaderStyle BackColor="#6D95E1" />
+			<SortedDescendingCellStyle BackColor="#E9EBEF" />
+			<SortedDescendingHeaderStyle BackColor="#4870BE" />
+			</asp:GridView><center>
 	</form>
-	
+
 </body>
 </html>
-	

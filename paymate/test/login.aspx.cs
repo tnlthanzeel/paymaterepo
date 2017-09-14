@@ -15,6 +15,7 @@ namespace test
             conString = ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
             loginerror.Visible = false;
             userblocked.Visible = false;
+            Session.RemoveAll();
         }
 
         protected void btnlog_Click(object sender, EventArgs e)

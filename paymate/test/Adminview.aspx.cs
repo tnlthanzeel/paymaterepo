@@ -13,11 +13,18 @@ namespace test
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            loggedinas.Text = Session["loggedinas"].ToString();
-            norecord.Visible = false;
-            customerdetails.Visible = false;
-            blocked.Visible = false;
-            unblocked.Visible = false;
+            if (!string.IsNullOrEmpty(Session["loggedinas"] as string))
+            {
+                loggedinas.Text = Session["loggedinas"].ToString();
+                norecord.Visible = false;
+                customerdetails.Visible = false;
+                blocked.Visible = false;
+                unblocked.Visible = false;
+            }
+
+            else
+                Response.Redirect("login.aspx");
+
 
         }
 

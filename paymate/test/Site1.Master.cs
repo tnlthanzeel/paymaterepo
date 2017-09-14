@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Providers.Entities;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -11,7 +12,13 @@ namespace test
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            loggedin.Text = Session["loggedinas"].ToString();
+
+            if (!string.IsNullOrEmpty(Session["loggedinas"] as string))
+            {
+                loggedin.Text = Session["loggedinas"].ToString();
+            }
+            else
+                Response.Redirect("login.aspx");
         }
     }
 }

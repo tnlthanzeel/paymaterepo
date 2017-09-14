@@ -12,15 +12,20 @@ namespace test
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            cusidd.Text = Session["cusid"].ToString();
+           
+            if (!string.IsNullOrEmpty(Session["loggedinas"] as string))
+            {
+                cusidd.Text = Session["cusid"].ToString();
 
-            Customer customer = new Customer();
+                Customer customer = new Customer();
 
-            BankAccount banckaccount = customer.viewBbal(cusidd.Text);
+                BankAccount banckaccount = customer.viewBbal(cusidd.Text);
 
-            accountno.Text = banckaccount.accno.ToString();
-            balance.Text = "Rs. " + banckaccount.accbal.ToString();
-
+                accountno.Text = banckaccount.accno.ToString();
+                balance.Text = "Rs. " + banckaccount.accbal.ToString();
+            }
+            else
+                Response.Redirect("login.aspx");
 
         }
     }

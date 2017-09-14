@@ -90,12 +90,11 @@
 		<br />
 		<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 		</asp:ContentPlaceHolder>
-		
+
 
 	</header>
-<asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-
-</asp:ContentPlaceHolder>
+	<asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+	</asp:ContentPlaceHolder>
 	<!-- jQuery -->
 	<script src="~/Content/vendor/jquery/jquery.min.js"></script>
 
@@ -109,7 +108,11 @@
 
 	<!-- Theme JavaScript -->
 	<script src="~/Content/js/creative.min.js"></script>
-	
+
+
+
 </body>
 </html>
+
+
 

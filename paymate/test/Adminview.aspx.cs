@@ -11,6 +11,7 @@ namespace test
 {
     public partial class Adminview : System.Web.UI.Page
     {
+        Admin admin = new Admin();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(Session["loggedinas"] as string))
@@ -20,6 +21,7 @@ namespace test
                 customerdetails.Visible = false;
                 blocked.Visible = false;
                 unblocked.Visible = false;
+
             }
 
             else
@@ -30,7 +32,6 @@ namespace test
 
         protected void loaddetails_Click(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
 
             var dt = admin.viewcusdetail();
             customerdetails.DataSource = dt;
@@ -42,8 +43,6 @@ namespace test
 
         protected void search_Click(object sender, EventArgs e)
         {
-
-            Admin admin = new Admin();
 
             var dt = admin.viewuser(cusidd.Text);
 
@@ -65,7 +64,6 @@ namespace test
 
         protected void blockuser_Click(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
             var dt = admin.buser(cusidd.Text);
             if (dt.Rows.Count == 0)
             {
@@ -74,9 +72,11 @@ namespace test
 
             else
             {
+
                 customerdetails.Visible = true;
                 customerdetails.DataSource = dt;
                 customerdetails.DataBind();
+                //customerdetails.HeaderRow.Cells[0].Text = "Customer ID";
                 dt.Dispose();
                 blocked.Visible = true;
 
@@ -86,7 +86,7 @@ namespace test
 
         protected void unblockuser_Click(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
+
             var dt = admin.ubluser(cusidd.Text);
             if (dt.Rows.Count == 0)
             {
@@ -102,5 +102,26 @@ namespace test
                 unblocked.Visible = true;
             }
         }
+
+        protected void blockedusers_Click(object sender, EventArgs e)
+        {
+            var dt = admin.viewblist();
+            if (dt.Rows.Count == 0)
+            {
+                norecord.Visible = true;
+            }
+
+            else
+            {
+                customerdetails.Visible = true;
+                customerdetails.DataSource = dt;
+                customerdetails.DataBind();
+                dt.Dispose();
+
+            }
+
+        }
+
+
     }
 }

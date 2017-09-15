@@ -39,7 +39,8 @@
             <asp:Label ID="loggedinas" runat="server" CssClass="text-uppercase" ForeColor="#0000ff" Font-Bold="true"></asp:Label>
         </div>
         <br />
-        &nbsp;&nbsp;&nbsp;<asp:Button ID="loaddetails" runat="server" Text="Load Details" CssClass="btn btn-success" Style="width: auto;" OnClick="loaddetails_Click" />
+        &nbsp;&nbsp;&nbsp;<asp:Button ID="loaddetails" runat="server" Text="All Users" CssClass="btn btn-success" Style="width: auto;" OnClick="loaddetails_Click" />
+        &nbsp;<asp:Button ID="blockedusers" runat="server" Text="All Blocked Users" CssClass="btn btn-success" Style="width: auto;" OnClick="blockedusers_Click"  />
         <br />
         <br />
         &nbsp;&nbsp; Enter Customer Id

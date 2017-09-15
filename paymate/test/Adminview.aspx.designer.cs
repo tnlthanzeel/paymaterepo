@@ -40,6 +40,15 @@ namespace test {
         protected global::System.Web.UI.WebControls.Button loaddetails;
         
         /// <summary>
+        /// blockedusers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button blockedusers;
+        
+        /// <summary>
         /// cusidd control.
         /// </summary>
         /// <remarks>

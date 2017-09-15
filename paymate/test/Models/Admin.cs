@@ -11,15 +11,15 @@ namespace test.Models
     {
         public string adminId { get; set; }
         public string adminpasswrod { get; set; }
-        public string cusid { get; set; }
-        public int bstate { get; set; }
-        public string cuslname { get; set; }
-        public string cusemail { get; set; }
-        public string cusaddress { get; set; }
-        public long cusphone { get; set; }
-        public string debitcardtype { get; set; }
-        public string debitcardno { get; set; }
-        public string cusin { get; set; }
+        //public string cusid { get; set; }
+        //public int bstate { get; set; }
+        //public string cuslname { get; set; }
+        //public string cusemail { get; set; }
+        //public string cusaddress { get; set; }
+        //public long cusphone { get; set; }
+        //public string debitcardtype { get; set; }
+        //public string debitcardno { get; set; }
+        // public string cusin { get; set; }
         public string conString = "";
 
         public bool login()
@@ -112,8 +112,21 @@ namespace test.Models
 
         }
 
-        public void viewblist()
-        { }
+        public DataTable viewblist()
+        {
+            conString = System.Configuration.ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
+            SqlConnection con = new SqlConnection(conString);
+
+            SqlCommand cmd = new SqlCommand("select * from customer where dcusblockstat=1", con);
+            con.Open();
+            SqlDataAdapter ad = new SqlDataAdapter(cmd);
+            DataTable td = new DataTable();
+            ad.Fill(td);
+            con.Close();
+            cmd.Dispose();
+            ad.Dispose();
+            return td;
+        }
 
 
         public void addservices()

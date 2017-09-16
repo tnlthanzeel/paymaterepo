@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -94,7 +95,23 @@ namespace test.Models
         public void insurance()
         { }
 
-        public void viewTranslog()
-        { }
+        public DataTable viewTranslog(string cusid)
+        {
+
+            conString = ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
+            SqlConnection con = new SqlConnection(conString);
+
+            SqlCommand cmd = new SqlCommand("select * from log where dcusis='" + cusid + "'", con);
+            con.Open();
+            SqlDataAdapter ad = new SqlDataAdapter(cmd);
+            DataTable td = new DataTable();
+            ad.Fill(td);
+            con.Close();
+            cmd.Dispose();
+            ad.Dispose();
+            return td;
+
+
+        }
     }
 }

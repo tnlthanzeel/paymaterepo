@@ -34,11 +34,11 @@ namespace test
             if (rdr.Read())
             {
 
-                string uname = rdr[0].ToString();
-                string upwd = rdr[1].ToString();
-                int userrole = Convert.ToInt16(rdr[2]);
-                int blockstat = Convert.ToInt16(rdr[3]);
-                var cusname = rdr[4].ToString();
+                string uname = rdr[1].ToString();
+                string upwd = rdr[2].ToString();
+                int userrole = Convert.ToInt16(rdr[3]);
+                int blockstat = Convert.ToInt16(rdr[4]);
+                var cusname = rdr[5].ToString();
 
 
 

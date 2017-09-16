@@ -76,7 +76,6 @@ namespace test
                 customerdetails.Visible = true;
                 customerdetails.DataSource = dt;
                 customerdetails.DataBind();
-                //customerdetails.HeaderRow.Cells[0].Text = "Customer ID";
                 dt.Dispose();
                 blocked.Visible = true;
 

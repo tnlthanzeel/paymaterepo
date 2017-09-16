@@ -295,6 +295,7 @@
     <Content Include="Content\vendor\font-awesome\scss\_screen-reader.scss" />
     <Content Include="Content\vendor\font-awesome\scss\_stacked.scss" />
     <Content Include="Content\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="Fundtransfer.aspx" />
     <Content Include="Mylog.aspx" />
     <Content Include="Web.config" />
     <None Include="Properties\PublishProfiles\Paymate - FTP.pubxml" />
@@ -416,6 +417,13 @@
     </Compile>
     <Compile Include="Bankbalance.aspx.designer.cs">
       <DependentUpon>Bankbalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fundtransfer.aspx.cs">
+      <DependentUpon>Fundtransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fundtransfer.aspx.designer.cs">
+      <DependentUpon>Fundtransfer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

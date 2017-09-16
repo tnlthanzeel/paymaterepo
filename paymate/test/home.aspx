@@ -74,10 +74,10 @@
 	<img src="https://cdn3.iconfinder.com/data/icons/personal-business-finance-1/380/Funds_Transfer-512.png" width="100" height="100"/>
 	<br />
 	Fund Transfer
-  </a href="javascript:;">
+  </a>
 		</div>
 		<div class="tile azul hotel">
-<a  href="javascript:;">
+<a  href="ViewHotels.aspx">
    
 <img src="assets/img/hotel-icon-blue.jpg" width="100" height="100"/><br />
 	

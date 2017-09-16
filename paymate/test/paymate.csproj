@@ -295,6 +295,8 @@
     <Content Include="Content\vendor\font-awesome\scss\_screen-reader.scss" />
     <Content Include="Content\vendor\font-awesome\scss\_stacked.scss" />
     <Content Include="Content\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="Mylog.aspx" />
+    <Content Include="Web.config" />
     <None Include="Properties\PublishProfiles\Paymate - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\Paymate - Web Deploy.pubxml" />
     <Content Include="Content\bootstrap.css" />
@@ -376,7 +378,6 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
@@ -444,6 +445,13 @@
     <Compile Include="Models\Reservations.cs" />
     <Compile Include="Models\Telephone.cs" />
     <Compile Include="Models\Water.cs" />
+    <Compile Include="Mylog.aspx.cs">
+      <DependentUpon>Mylog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mylog.aspx.designer.cs">
+      <DependentUpon>Mylog.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Myposition.aspx.cs">
       <DependentUpon>Myposition.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

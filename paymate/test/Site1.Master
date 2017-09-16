@@ -58,6 +58,9 @@
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
 								<li>
+									<a class="page-scroll" href="Mylog.aspx">View Log</a>
+								</li>
+								<li>
 									<a class="page-scroll" href="About.aspx">About</a>
 								</li>
 								<li>

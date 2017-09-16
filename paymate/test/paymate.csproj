@@ -244,7 +244,13 @@
     <Content Include="assets\img\backgrounds\1%402x.jpg" />
     <Content Include="assets\img\backgrounds\1.jpg" />
     <Content Include="assets\img\backgrounds\logout.png" />
+    <Content Include="assets\img\hilton.png" />
     <Content Include="assets\img\hotel-icon-blue.jpg" />
+    <Content Include="assets\img\kingsbury-hotel.jpg" />
+    <Content Include="assets\img\kingsbury.png" />
+    <Content Include="assets\img\red.png" />
+    <Content Include="assets\img\shang.png" />
+    <Content Include="assets\img\TheKingsburyHotel.png" />
     <Content Include="assets\js\jquery-1.11.1.js" />
     <Content Include="assets\js\jquery-1.11.1.min.js" />
     <Content Include="assets\js\jquery.backstretch.js" />
@@ -297,6 +303,7 @@
     <Content Include="Content\vendor\font-awesome\scss\_variables.scss" />
     <Content Include="Fundtransfer.aspx" />
     <Content Include="Mylog.aspx" />
+    <Content Include="ViewHotels.aspx" />
     <Content Include="Web.config" />
     <None Include="Properties\PublishProfiles\Paymate - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\Paymate - Web Deploy.pubxml" />
@@ -490,6 +497,13 @@
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewHotels.aspx.cs">
+      <DependentUpon>ViewHotels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewHotels.aspx.designer.cs">
+      <DependentUpon>ViewHotels.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -26,49 +26,58 @@ namespace test
         protected void Transfer_Click(object sender, EventArgs e)
         {
             BankAccount bankaccount = new BankAccount();
-            if (string.IsNullOrEmpty(AccountNo.Text) || Convert.ToInt32(Amount.Text)<=0)
-            {
-                accnoempty.Visible = true;
-                return;
-            }
-            
 
-            else
+            try
             {
-                Customer customer = new Customer();
-                int result = customer.fundtransfer(AccountNo.Text);
-
-                if (result == 1)
+                if (string.IsNullOrEmpty(AccountNo.Text.Trim()) || Convert.ToInt32(Amount.Text.Trim()) <= 0 || string.IsNullOrEmpty(Amount.Text.Trim()) | string.IsNullOrWhiteSpace(Amount.Text.Trim()))
                 {
+                    accnoempty.Visible = true;
+                    return;
+                }
 
-                    result = bankaccount.requestftransfer(Session["cusid"].ToString(), Amount.Text);
+
+                else
+                {
+                    Customer customer = new Customer();
+                    int result = customer.fundtransfer(AccountNo.Text);
 
                     if (result == 1)
                     {
-                        bankaccount.transfer(Session["cusid"].ToString(), Amount.Text, AccountNo.Text);
 
-                        Transfer.Enabled = false;
+                        result = bankaccount.requestftransfer(Session["cusid"].ToString(), Amount.Text);
 
-                        Transaction transaction = new Transaction()
+                        if (result == 1)
                         {
-                            cusid= Session["cusid"].ToString(),
-                            amount=Convert.ToInt32(Amount.Text),
-                            datetime=DateTime.Now,
-                            type="Fund Transaction"
-                        };
+                            bankaccount.transfer(Session["cusid"].ToString(), Amount.Text, AccountNo.Text);
 
-                        transaction.update(transaction);
-                        
+                            Transfer.Enabled = false;
 
-                        transfersuccess.Visible = true;
+                            Transaction transaction = new Transaction()
+                            {
+                                cusid = Session["cusid"].ToString(),
+                                amount = Convert.ToInt32(Amount.Text),
+                                datetime = DateTime.Now,
+                                type = "Fund Transaction"
+                            };
+
+                            transaction.update(transaction);
+
+
+                            transfersuccess.Visible = true;
+                        }
+
+                        else
+                            lowbalance.Visible = true;
                     }
 
                     else
-                        lowbalance.Visible = true;
+                        invalidaccno.Visible = true;
                 }
+            }
 
-                else
-                    invalidaccno.Visible = true;
+            catch (Exception)
+            {
+                accnoempty.Visible = true;
             }
         }
     }

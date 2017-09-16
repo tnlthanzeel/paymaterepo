@@ -6,6 +6,7 @@
     <asp:TextBox ID="AccountNo" CssClass="form-control input-md" Width="200"  runat="server"></asp:TextBox>
     <h4>Amount</h4>
     <asp:TextBox ID="Amount" CssClass="form-control input-md" Width="200" runat="server"></asp:TextBox><br /><br />
+     <asp:Button ID="Transfer" runat="server" Text="Transfer" ForeColor="#000000"/>
     </center>
        </form>
    

@@ -2,12 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <form runat="server"><h2 style="text-align:left">Fund Transfer</h2>
 <h4>Transfer to account number </h4>
-    <br />
-    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+   <center>
+    <asp:TextBox ID="AccountNo" CssClass="form-control input-md" Width="200"  runat="server"></asp:TextBox>
     <h4>Amount</h4>
-    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox><br /><br />
-     <asp:Button ID="Button1" runat="server" Text="Transfer" ForeColor="#999966" />
-    </form>
+    <asp:TextBox ID="Amount" CssClass="form-control input-md" Width="200" runat="server"></asp:TextBox><br /><br />
+    </center>
+       </form>
    
 </asp:Content>
 

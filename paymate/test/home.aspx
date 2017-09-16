@@ -74,7 +74,7 @@
 	<img src="https://cdn3.iconfinder.com/data/icons/personal-business-finance-1/380/Funds_Transfer-512.png" width="100" height="100"/>
 	<br />
 	Fund Transfer
-  </a>
+  </a href="javascript:;">
 		</div>
 		<div class="tile azul hotel">
 <a  href="javascript:;">
@@ -86,7 +86,7 @@
 		
 	
 	   <div class="tile  verde phone">
-<a  href="ViewPhoneBill.aspx">
+<a  href="javascript:;">
 	<img src="https://media.acecash.com/~/media/ACE/Images/Icons/prod-bp.ashx?h=100&w=100&la=en&hash=5FCC59CEF5CFBE1874021FFB16D2F43B89BA9DE4" width="100" height="100"/><br /> View Phone Bill
 
   </a>

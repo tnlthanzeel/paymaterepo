@@ -101,6 +101,7 @@ namespace test.Models
             conString = ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
             SqlConnection con = new SqlConnection(conString);
 
+            SqlCommand cmd = new SqlCommand("select * from log where dcusis='" + cusid + "'", con);
             con.Open();
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
             DataTable td = new DataTable();

@@ -22,6 +22,24 @@ namespace test {
         protected global::System.Web.UI.WebControls.TextBox AccountNo;
         
         /// <summary>
+        /// invalidaccno control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label invalidaccno;
+        
+        /// <summary>
+        /// lowbalance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lowbalance;
+        
+        /// <summary>
         /// Amount control.
         /// </summary>
         /// <remarks>
@@ -38,5 +56,23 @@ namespace test {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Transfer;
+        
+        /// <summary>
+        /// transfersuccess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label transfersuccess;
+        
+        /// <summary>
+        /// accnoempty control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label accnoempty;
     }
 }

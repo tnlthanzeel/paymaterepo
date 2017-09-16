@@ -64,8 +64,31 @@ namespace test.Models
 
         }
 
-        public void fundtransfer()
-        { }
+        public int fundtransfer(string accountno)
+        {
+
+            conString = ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
+            SqlConnection con = new SqlConnection(conString);
+
+
+            SqlCommand cmd = new SqlCommand("select * from bankacc where daccno='" + Convert.ToInt32(accountno) + "'", con);
+            con.Open();
+            SqlDataReader rdr = cmd.ExecuteReader();
+            bool accountexists = rdr.Read();
+            con.Close();
+
+
+            if (accountexists == true)
+                return 1;
+
+
+            else
+                return 0;
+
+
+
+        
+        }
 
 
         public void viewhotel()

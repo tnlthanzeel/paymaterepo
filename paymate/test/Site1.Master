@@ -38,6 +38,17 @@
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/114.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/72.png" />
 	<link rel="apple-touch-icon-precomposed" href="assets/ico/57.png" />
+
+	<style type="text/css">
+		a:hover {
+			height: 55px;
+		}
+
+		img:hover {
+			height: 110px;
+			width: 110px;
+		}
+	</style>
 </head>
 
 <body id="page-top">

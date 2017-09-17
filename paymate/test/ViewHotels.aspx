@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="ViewHotels.aspx.cs" Inherits="test.ViewHotels1" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <style type="text/css">
+    <style type="text/css">
         .a {
             width: auto;
             height: auto;
@@ -45,14 +46,16 @@
         }
 
 
-
         .wrap {
             overflow: hidden;
             margin: 10px;
         }
     </style>
 
-<h2 style="text-align: left">Hotel Reservations  </h2>
+
+
+
+    <h2 style="text-align: left">Hotel Reservations  </h2>
     <center>
 		 <div class="a">
 	<div class="b">          
@@ -90,6 +93,7 @@
 	   <div class="tile azul electricity">
 	</div>       
 </div>
+			 </div>
 	  </center>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">

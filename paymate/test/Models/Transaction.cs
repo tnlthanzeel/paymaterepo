@@ -13,7 +13,6 @@ namespace test.Models
         public string type { get; set; }
         public string cusid { get; set; }
         public int amount { get; set; }
-        public DateTime datetime { get; set; }
         public string conString = "";
 
 
@@ -23,8 +22,15 @@ namespace test.Models
             conString = ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
             SqlConnection con = new SqlConnection(conString);
 
+            var info = TimeZoneInfo.FindSystemTimeZoneById("Sri Lanka Standard Time");
 
-            SqlCommand cmd = new SqlCommand("insert into log values('"+transaction.cusid+ "','" + transaction.type + "','" + transaction.amount + "','" + transaction.datetime + "')", con);
+            DateTimeOffset localServerTime = DateTimeOffset.Now;
+
+            DateTimeOffset slt = TimeZoneInfo.ConvertTime(localServerTime, info);
+
+            DateTime sltime = slt.DateTime;
+
+            SqlCommand cmd = new SqlCommand("insert into log values('" + transaction.cusid + "','" + transaction.type + "','" + transaction.amount + "','" + sltime + "')", con);
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();

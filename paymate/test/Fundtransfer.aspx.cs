@@ -56,7 +56,6 @@ namespace test
                             {
                                 cusid = Session["cusid"].ToString(),
                                 amount = Convert.ToInt32(Amount.Text),
-                                datetime = DateTime.Now,
                                 type = "Fund Transaction"
                             };
 

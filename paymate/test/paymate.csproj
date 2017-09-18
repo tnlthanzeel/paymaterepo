@@ -304,7 +304,9 @@
     <Content Include="Fundtransfer.aspx" />
     <Content Include="Mylog.aspx" />
     <Content Include="PayPhoneBill.aspx" />
+    <Content Include="Thekingsburry.aspx" />
     <Content Include="ViewHotels.aspx" />
+    <Content Include="Viewreservations.aspx" />
     <Content Include="Web.config" />
     <None Include="Properties\PublishProfiles\Paymate - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\Paymate - Web Deploy.pubxml" />
@@ -506,12 +508,26 @@
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Thekingsburry.aspx.cs">
+      <DependentUpon>Thekingsburry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Thekingsburry.aspx.designer.cs">
+      <DependentUpon>Thekingsburry.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewHotels.aspx.cs">
       <DependentUpon>ViewHotels.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewHotels.aspx.designer.cs">
       <DependentUpon>ViewHotels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Viewreservations.aspx.cs">
+      <DependentUpon>Viewreservations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viewreservations.aspx.designer.cs">
+      <DependentUpon>Viewreservations.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

@@ -124,7 +124,7 @@ namespace test.Models
             conString = ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
             SqlConnection con = new SqlConnection(conString);
 
-            SqlCommand cmd = new SqlCommand("select * from log where dcusis='" + cusid + "' and date >= '"+transactdate.fromdate+ "' and date <=  '" + transactdate.todate + "'", con);
+            SqlCommand cmd = new SqlCommand("select * from log where dcusis='" + cusid + "' and date >= '"+transactdate.fromdate+ "' and date <=  '" + transactdate.todate.AddDays(1) + "'", con);
             con.Open();
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
             DataTable td = new DataTable();

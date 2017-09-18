@@ -45,8 +45,8 @@ namespace test
 
 
             }
-            
-            catch(Exception)
+
+            catch (Exception)
             {
                 dateerror.Visible = true;
             }

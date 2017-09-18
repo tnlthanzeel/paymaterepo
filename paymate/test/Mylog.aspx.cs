@@ -21,6 +21,7 @@ namespace test
             else
             {
                 dateerror.Visible = false;
+                nodata.Visible = false;
             }
 
         }
@@ -29,6 +30,7 @@ namespace test
         {
             try
             {
+                nodata.Visible = false;
                 dateerror.Visible = false;
 
                 Customer customer = new Customer();
@@ -40,7 +42,12 @@ namespace test
                 var dt = customer.viewTranslog(Session["cusid"].ToString(), transactdate);
                 logtable.DataSource = dt;
                 logtable.DataBind();
-                logtable.Visible = true;
+
+                if (dt.Rows.Count != 0)
+                    logtable.Visible = true;
+
+                else
+                    nodata.Visible = true;
 
 
 

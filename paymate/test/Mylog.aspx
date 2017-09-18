@@ -26,7 +26,8 @@
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
 </asp:GridView></center>
         <asp:Label ID="dateerror" BackColor="#ccff33" runat="server" Text="Please select a valid date range" ForeColor="#ff3300" Font-Bold="true" Font-Size="X-Large"></asp:Label>
-    </form>
+    <asp:Label ID="nodata" BackColor="#ccff33" runat="server" Text=" No records found " ForeColor="#ff3300" Font-Bold="true" Font-Size="X-Large"></asp:Label>
+         </form>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 </asp:Content>

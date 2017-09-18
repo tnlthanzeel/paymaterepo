@@ -13,6 +13,8 @@ namespace test.Models
         public string type { get; set; }
         public string cusid { get; set; }
         public int amount { get; set; }
+        public DateTime fromdate { get; set; }
+        public DateTime todate { get; set; }
         public string conString = "";
 
 

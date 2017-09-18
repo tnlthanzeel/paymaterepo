@@ -15,11 +15,29 @@ namespace test
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(Session["cusid"] as string))
-            {
-                Customer customer = new Customer();
+            if (string.IsNullOrEmpty(Session["cusid"] as string))
+                Response.Redirect("login.aspx");
 
-                var dt = customer.viewTranslog(Session["cusid"].ToString());
+            else
+            {
+                dateerror.Visible = false;
+            }
+
+        }
+
+        protected void processlog_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dateerror.Visible = false;
+
+                Customer customer = new Customer();
+                Transaction transactdate = new Transaction()
+                {
+                    fromdate = Convert.ToDateTime(fromdate.Value),
+                    todate = Convert.ToDateTime(todate.Value)
+                };
+                var dt = customer.viewTranslog(Session["cusid"].ToString(), transactdate);
                 logtable.DataSource = dt;
                 logtable.DataBind();
                 logtable.Visible = true;
@@ -27,11 +45,11 @@ namespace test
 
 
             }
-
-            else
-                Response.Redirect("login.aspx");
-
-
+            
+            catch(Exception)
+            {
+                dateerror.Visible = true;
+            }
         }
     }
 }

@@ -56,6 +56,11 @@
 
 
 	<h2 style="text-align: left">Hotel Reservations  </h2>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
 	<center>
 		 <div class="a">
 	<div class="b">          

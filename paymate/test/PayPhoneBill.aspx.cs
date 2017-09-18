@@ -11,7 +11,13 @@ namespace test
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(Session["cusid"] as string))
+                Response.Redirect("login.aspx");
 
+            else
+            {
+               
+            }
         }
     }
 }

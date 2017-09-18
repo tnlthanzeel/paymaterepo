@@ -91,8 +91,26 @@ namespace test.Models
         }
 
 
-        public void viewhotel()
-        { }
+        public DataTable viewhotel()
+        {
+
+            conString = ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
+            SqlConnection con = new SqlConnection(conString);
+
+            SqlCommand cmd = new SqlCommand("select droomno,dprice,droomtype from room", con);
+            con.Open();
+            SqlDataAdapter ad = new SqlDataAdapter(cmd);
+            DataTable td = new DataTable();
+            ad.Fill(td);
+            con.Close();
+            cmd.Dispose();
+            ad.Dispose();
+            return td;
+
+
+
+
+        }
 
         public void reserveroom()
         {

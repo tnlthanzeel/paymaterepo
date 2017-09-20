@@ -21,6 +21,7 @@ namespace test.Models
         public string CardNumber { get; set; }
         public string conString = "";
 
+        
         public int cregister(Customer newcustomer)
         {
             conString = ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
@@ -87,7 +88,7 @@ namespace test.Models
 
 
 
-        
+
         }
 
 
@@ -112,9 +113,25 @@ namespace test.Models
 
         }
 
-        public void reserveroom()
+        public int reserveroom(Reservations reservation)
         {
+            int isreserved = 0;
 
+            conString = ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
+            SqlConnection con = new SqlConnection(conString);
+
+            var reservedate = reservation.cindate.ToShortDateString();
+
+            SqlCommand cmd = new SqlCommand("select * from reservation where date='" + reservedate + "' and droomno='" + reservation.roomno + "' and status=0", con);//if status 0, meand room already booked, else if status is one room available
+            con.Open();
+            SqlDataAdapter ad = new SqlDataAdapter(cmd);
+            DataTable td = new DataTable();
+            ad.Fill(td);
+            con.Close();
+            cmd.Dispose();
+            ad.Dispose();
+
+            return isreserved = td.Rows.Count == 0 ? 0 : 1;
         }
 
 
@@ -136,13 +153,13 @@ namespace test.Models
         public void insurance()
         { }
 
-        public DataTable viewTranslog(string cusid,Transaction transactdate)
+        public DataTable viewTranslog(string cusid, Transaction transactdate)
         {
 
             conString = ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
             SqlConnection con = new SqlConnection(conString);
 
-            SqlCommand cmd = new SqlCommand("select * from log where dcusis='" + cusid + "' and date >= '"+transactdate.fromdate+ "' and date <=  '" + transactdate.todate.AddDays(1) + "'", con);
+            SqlCommand cmd = new SqlCommand("select * from log where dcusis='" + cusid + "' and date >= '" + transactdate.fromdate + "' and date <=  '" + transactdate.todate.AddDays(1) + "'", con);
             con.Open();
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
             DataTable td = new DataTable();

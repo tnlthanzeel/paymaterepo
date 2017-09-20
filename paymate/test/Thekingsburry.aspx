@@ -17,11 +17,31 @@
                 <p class="label label-primary" style="font-size: large;">New Reservation</p>
                 <br />
                 <br />
+                <font style="font: bold; font-size: large;">Reservation Date</font>&nbsp;&nbsp;
+                <input type="date" id="reservationdate" runat="server" style="color: black;" />
+                <br />
+                <br />
                 <p style="float: left; font-size: larger;" class="label">
-                    <br/>Enter room number
+
+                    <br />
+                    Enter room number
                 </p>
-                <input type="number" id="roomnumber" runat="server" style="width: 50px; height: 50px" />
-                &nbsp;<input type="button" value="Reserve" class="btn btn-default"  />
+                <input type="number" id="roomnumber" runat="server" style="width: 50px; height: 50px; color: black;" />
+                &nbsp;<asp:Button ID="reserv" runat="server" Text="Reserve" CssClass="btn btn-default" OnClick="reserv_Click" />
+                <br />
+                <br />
+                <br />
+                <asp:Label ID="selectdate" BackColor="#ccff33" runat="server" Text="Please select a date" ForeColor="#ff3300" Font-Bold="true" Font-Size="X-Large"></asp:Label>
+                <asp:Label ID="invaliddate" BackColor="#ccff33" runat="server" Text="Date cannot be a past date or the current date " ForeColor="#ff3300" Font-Bold="true" Font-Size="X-Large"></asp:Label>
+                <asp:Label ID="roombooked" BackColor="#ccff33" runat="server" Text="Room already booked for the selected date " ForeColor="#ff3300" Font-Bold="true" Font-Size="X-Large"></asp:Label>
+                <asp:Label ID="noroomno" BackColor="#ccff33" runat="server" Text="Enter a room number" ForeColor="#ff3300" Font-Bold="true" Font-Size="X-Large"></asp:Label>
+                <asp:Label ID="roomavailable" BackColor="#ccff33" runat="server" Text="Room Available for booking " ForeColor="#00cc00" Font-Bold="true" Font-Size="X-Large"></asp:Label>
+                <br/>
+                <asp:Button ID="pay" runat="server" Text="Pay" CssClass="btn btn-default btn-group-lg" OnClick="pay_Click"/>
+                <br/>
+                <asp:Label ID="verifypay" BackColor="#ccff33" runat="server" Text="Verifying Payment " ForeColor="#00cc00" Font-Bold="true" Font-Size="X-Large"></asp:Label>
+                 <asp:Label ID="insufficient" BackColor="#ccff33" runat="server" Text="Insufficient Bank Ballance " ForeColor="red" Font-Bold="true" Font-Size="X-Large"></asp:Label>
+                <asp:Label ID="reserved" BackColor="#ccff33" runat="server" Text="Room Reserved Successfully " ForeColor="#00cc00" Font-Bold="true" Font-Size="X-Large"></asp:Label>
             </div>
 
         </div>

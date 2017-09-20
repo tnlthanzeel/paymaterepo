@@ -67,10 +67,32 @@ namespace test.Models
             return result;
         }
 
-        public void verifypayment()
-        { }
+        public bool verifypayment(string cusidd, int roomno)
+        {
+            SqlCommand cmd = new SqlCommand();
+            conString = ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
+            SqlConnection con = new SqlConnection(conString);
 
-        public void transfer(string cusid, string ammount, string accno)
+            cmd = new SqlCommand("select * from bankacc where dcusid='" + cusidd + "'", con);
+            con.Open();
+            SqlDataReader rdr = cmd.ExecuteReader();
+            rdr.Read();
+            accbal = Convert.ToInt32(rdr[3].ToString());
+            rdr.Close();
+            cmd = new SqlCommand("select * from room where droomno='" + roomno + "'", con);
+            rdr = cmd.ExecuteReader();
+            rdr.Read();
+            int temproomammount = Convert.ToInt32(rdr[2].ToString());
+            string temproomtype = rdr[3].ToString();
+            rdr.Close();
+            con.Close();
+
+
+            return (accbal < temproomammount) ? true : false;
+
+        }
+
+        public void transfer(string cusidd, string ammount, string accno)
         {
             int transferfrom = 0, transferto = 0;
             SqlCommand cmd = new SqlCommand();
@@ -79,14 +101,14 @@ namespace test.Models
 
 
 
-            cmd = new SqlCommand("select * from bankacc where dcusid='" + cusid + "'", con);
+            cmd = new SqlCommand("select * from bankacc where dcusid='" + cusidd + "'", con);
             con.Open();
             SqlDataReader rdr = cmd.ExecuteReader();
 
             rdr.Read();
             transferfrom = Convert.ToInt32(rdr[3].ToString()) - Convert.ToInt32(ammount.ToString());
             rdr.Close();
-            cmd = new SqlCommand("update bankacc set daccbal='" + transferfrom + "' where dcusid='" + cusid + "'", con);
+            cmd = new SqlCommand("update bankacc set daccbal='" + transferfrom + "' where dcusid='" + cusidd + "'", con);
             cmd.ExecuteNonQuery();
 
 
@@ -103,9 +125,6 @@ namespace test.Models
 
 
             con.Close();
-
-
-
 
         }
     }

@@ -21,6 +21,7 @@ namespace test
 
             else
             {
+                Invalidroomno.Visible = false;
                 reserved.Visible = false;
                 pay.Visible = false;
                 roomavailable.Visible = false;
@@ -42,6 +43,7 @@ namespace test
             pay.Enabled = true;
             try
             {
+                Invalidroomno.Visible = false;
                 reserved.Visible = false;
                 verifypay.Visible = false;
                 insufficient.Visible = false;
@@ -53,6 +55,12 @@ namespace test
                 selectdate.Visible = false;
                 invaliddate.Visible = false;
                 roombooked.Visible = false;
+
+                if (Convert.ToInt16(roomnumber.Value) <= 0 || Convert.ToInt16(roomnumber.Value) > 10)
+                {
+                    Invalidroomno.Visible = true;
+                    return;
+                }
 
                 var info = TimeZoneInfo.FindSystemTimeZoneById("Sri Lanka Standard Time");
 
@@ -107,9 +115,8 @@ namespace test
 
         protected void pay_Click(object sender, EventArgs e)
         {
-
             pay.Visible = true;
-            
+
             BankAccount bankaccount = new BankAccount();
             bool lowaccbal = bankaccount.verifypayment(Session["cusid"].ToString(), Convert.ToInt16(roomnumber.Value));
 

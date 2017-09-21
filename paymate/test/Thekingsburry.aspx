@@ -42,6 +42,7 @@
                 <asp:Label ID="verifypay" BackColor="#ccff33" runat="server" Text="Verifying Payment " ForeColor="#00cc00" Font-Bold="true" Font-Size="X-Large"></asp:Label>
                  <asp:Label ID="insufficient" BackColor="#ccff33" runat="server" Text="Insufficient Bank Ballance " ForeColor="red" Font-Bold="true" Font-Size="X-Large"></asp:Label>
                 <asp:Label ID="reserved" BackColor="#ccff33" runat="server" Text="Room Reserved Successfully " ForeColor="#00cc00" Font-Bold="true" Font-Size="X-Large"></asp:Label>
+                <asp:Label ID="Invalidroomno" BackColor="#ccff33" runat="server" Text="Invalid Room Number " ForeColor="red" Font-Bold="true" Font-Size="X-Large"></asp:Label>
             </div>
 
         </div>

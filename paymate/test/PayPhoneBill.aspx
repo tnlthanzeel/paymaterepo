@@ -7,7 +7,7 @@
        Your Phone Number Is <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label> <br /><br />
     Bill Amount Is <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label> <br /><br />
     Enter Payment Amount <asp:TextBox ID="PaymantAmount" CssClass="form-control input-md" Width="200" runat="server"></asp:TextBox><br /><br />
-    <asp:Button ID="pay" runat="server" Text="Pay" EnableTheming="False" ForeColor="#333333" />
+    <asp:Button ID="pay" runat="server" Text="Pay"  CssClass="btn btn-primary" />
         </form>
     </center> 
 

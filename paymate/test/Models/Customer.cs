@@ -21,7 +21,7 @@ namespace test.Models
         public string CardNumber { get; set; }
         public string conString = "";
 
-        
+
         public int cregister(Customer newcustomer)
         {
             conString = ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
@@ -139,8 +139,10 @@ namespace test.Models
         { }
 
 
-        public void pbill()
+        public Telephone pbill(Customer customer)
         {
+            Telephone telephone = new Telephone();
+            return telephone.viewtbill(customer);
 
         }
 

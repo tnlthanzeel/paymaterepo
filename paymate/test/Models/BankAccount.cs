@@ -69,12 +69,14 @@ namespace test.Models
 
         public bool verifypayment(string cusidd, params int[] paymentfor)
         {
+            SqlCommand cmd = new SqlCommand();
+            conString = ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
+            SqlConnection con = new SqlConnection(conString);
+
             bool result = false;
             if (paymentfor[1] == 1)
             {
-                SqlCommand cmd = new SqlCommand();
-                conString = ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
-                SqlConnection con = new SqlConnection(conString);
+                
 
                 cmd = new SqlCommand("select * from bankacc where dcusid='" + cusidd + "'", con);
                 con.Open();
@@ -97,7 +99,15 @@ namespace test.Models
 
             else if (paymentfor[1] == 2)
             {
-
+                cmd = new SqlCommand("select * from bankacc where dcusid='" + cusidd + "'", con);
+                con.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+                rdr.Read();
+                accbal = Convert.ToInt32(rdr[3].ToString());
+                rdr.Close();
+                con.Close();
+                
+                result = (accbal < paymentfor[0]) ? true : false;
             }
 
             return result;

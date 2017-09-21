@@ -13,22 +13,22 @@ namespace test {
     public partial class PayPhoneBill {
         
         /// <summary>
-        /// Label1 control.
+        /// phonenumberlabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label phonenumberlabel;
         
         /// <summary>
-        /// Label2 control.
+        /// phonebillammount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label phonebillammount;
         
         /// <summary>
         /// PaymantAmount control.
@@ -40,12 +40,39 @@ namespace test {
         protected global::System.Web.UI.WebControls.TextBox PaymantAmount;
         
         /// <summary>
-        /// pay control.
+        /// paybill control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button pay;
+        protected global::System.Web.UI.WebControls.Button paybill;
+        
+        /// <summary>
+        /// invalidammount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label invalidammount;
+        
+        /// <summary>
+        /// insufficentammount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label insufficentammount;
+        
+        /// <summary>
+        /// paymentsuccessfull control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label paymentsuccessfull;
     }
 }

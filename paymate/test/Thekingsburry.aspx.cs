@@ -118,7 +118,7 @@ namespace test
             pay.Visible = true;
 
             BankAccount bankaccount = new BankAccount();
-            bool lowaccbal = bankaccount.verifypayment(Session["cusid"].ToString(), Convert.ToInt16(roomnumber.Value),1);// 1 for room reservatio verification
+            bool lowaccbal = bankaccount.verifypayment(Session["cusid"].ToString(), Convert.ToInt16(roomnumber.Value), 1);// 1 for room reservatio verification
 
             if (lowaccbal == true)
             {
@@ -130,7 +130,7 @@ namespace test
             else if (lowaccbal == false)
             {
                 Pay pay = new Pay();
-                pay.confirmpay(Session["cusid"].ToString(), Convert.ToInt16(roomnumber.Value));
+                pay.confirmpay(Session["cusid"].ToString(), Convert.ToInt16(roomnumber.Value),1);
 
                 Reservations reservation = new Reservations()
                 {

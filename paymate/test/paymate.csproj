@@ -304,6 +304,7 @@
     <Content Include="Content\vendor\font-awesome\scss\_stacked.scss" />
     <Content Include="Content\vendor\font-awesome\scss\_variables.scss" />
     <Content Include="Fundtransfer.aspx" />
+    <Content Include="FundTrasferReport.aspx" />
     <Content Include="Mylog.aspx" />
     <Content Include="PayPhoneBill.aspx" />
     <Content Include="ReservationReport.aspx" />
@@ -315,6 +316,17 @@
     </Content>
     <Content Include="paymateDataSet.xsc">
       <DependentUpon>paymateDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="fundtransferdataset.xsc">
+      <DependentUpon>fundtransferdataset.xsd</DependentUpon>
+    </Content>
+    <None Include="fundtransferdataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fundtransferdataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="fundtransferdataset.xss">
+      <DependentUpon>fundtransferdataset.xsd</DependentUpon>
     </Content>
     <None Include="paymateDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
@@ -451,6 +463,18 @@
     <Compile Include="Fundtransfer.aspx.designer.cs">
       <DependentUpon>Fundtransfer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="fundtransferdataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fundtransferdataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FundTrasferReport.aspx.cs">
+      <DependentUpon>FundTrasferReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FundTrasferReport.aspx.designer.cs">
+      <DependentUpon>FundTrasferReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -572,6 +596,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Fundtransferreport.rdlc" />
     <EmbeddedResource Include="ReservationResport.rdlc" />
   </ItemGroup>
   <PropertyGroup>

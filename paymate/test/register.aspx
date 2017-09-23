@@ -35,7 +35,7 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="emailId">User Email</label>
                         <div class="col-md-6">
-                            <input id="emailId" name="emailId" type="text" runat="server" placeholder="paymate@something.com" class="form-control input-md" required="" /><asp:Label ID="useravailable" runat="server" Text="This email address is already taken" ForeColor="red"></asp:Label>
+                            <input id="emailId" name="emailId" type="email" runat="server" placeholder="paymate@something.com" class="form-control input-md" required="" /><asp:Label ID="useravailable" runat="server" Text="This email address is already taken" ForeColor="red"></asp:Label>
 
                         </div>
                     </div>

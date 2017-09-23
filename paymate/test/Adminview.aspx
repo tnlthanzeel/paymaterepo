@@ -33,8 +33,9 @@
 
 <body style="background-image: url(assets/img/adminlogged.png);">
         <div style="float:right">
+            <br/>
             <a href="ReservationReport.aspx">
-                <input type="button" value="Reservation Report" class="btn btn-group" />
+                <input type="button" value="Reservation Report" class="btn btn-group" />&nbsp;
 
             </a>
            

@@ -12,7 +12,9 @@
             <div class="btn btn-default ">to make people’s lives easier and less stressful</div>
             <br />
             <br />
-            <center style="font: bold; font-size: large"><h1>About</h1><center> <br /> <br />
+            <hr />
+            <center style="font: bold; font-size: large"><h1>About</h1><center> <hr/> <br /> <br />
+               
         <table >
             <tr>
                 <td style="width:700px;text-align:justify">
@@ -38,6 +40,6 @@ Anyone with a Visa Debit card is eligible to use it.
     </ul>
     </div> <br/>
         </div>
-       
+
     </div>
 </asp:Content>

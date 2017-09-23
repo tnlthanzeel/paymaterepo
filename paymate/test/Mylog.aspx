@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form runat="server">
-        <h2 style="text-align: left">Transaction Report</h2>
+        <h2 style="text-align: left">Transaction Log</h2>
         <div style="float: left; font: bold; font-size: larger">
             &nbsp;&nbsp;&nbsp;From&nbsp;<input type="date" id="fromdate" runat="server" style="color: black" />
             &nbsp;&nbsp;&nbsp;  To&nbsp;<input type="date" id="todate" runat="server" style="color: black" />

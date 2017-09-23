@@ -32,6 +32,14 @@
 </head>
 
 <body style="background-image: url(assets/img/adminlogged.png);">
+        <div style="float:right">
+            <a href="ReservationReport.aspx">
+                <input type="button" value="Reservation Report" class="btn btn-group" />
+
+            </a>
+           
+        </div>
+
     <form id="form1" runat="server">
         <div>
             <a href="login.aspx">
@@ -56,6 +64,7 @@
             <asp:Label ID="unblocked" runat="server" Text="User Unblocked Successfully" Font-Bold="true" ForeColor="#009933"></asp:Label>
 
         </div>
+
         <br />
         <center><asp:GridView ID="customerdetails" runat="server" CssClass="table table-hover" CellPadding="4" ForeColor="#333333" GridLines="None" >
             <AlternatingRowStyle BackColor="White" />

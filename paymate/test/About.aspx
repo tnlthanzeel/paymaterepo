@@ -1,15 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="test.About" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div style="text-align:center">
+    <div style="text-align: center">
 
-   <center><h1>-Our Mission-</h1></center> <br />
-    
-    to make people’s lives easier and less stressful. <br />
-    <br /> <center><h1>About</h1><center> <br /> <br />
+        <center><h1>-Our Mission-</h1></center>
+        <br />
+
+        <div class="alert-success">
+            <br />
+            <div class="btn btn-default ">to make people’s lives easier and less stressful</div>
+            <br />
+            <br />
+            <center style="font: bold; font-size: large"><h1>About</h1><center> <br /> <br />
         <table >
             <tr>
-                <td >
+                <td style="width:700px;text-align:justify">
     Paying bills and transferring cash have been a common task for the common man in the modern world. Which is for some,
 not an easy task with the busy schedule they bare. PAYmate is an Application which is mainly designed
 to meet Every day needs of a user which includes many of the selected quite important tasks like cash
@@ -20,15 +26,18 @@ Anyone with a Visa Debit card is eligible to use it.
                 </tr>
             </table>
 
-<br />To do real time transactions ‘on the go’ such as Bill payments, Bank transactions and Hotel reservations.<br />
-
-4.1 Bill Payment<br />
-4.2 View, Reserve and cancel hotel Rooms.<br />
-4.3 Pay Insurance Premium.<br />
-4.4 Bank to Bank fund transferring.<br />
-4.5 Check Bank balance.<br />
-4.6 View transaction log<br />
-
-        
+<br />To do real time transactions ‘on the go’ such as Bill payments, Bank transactions and Hotel reservations.<br /><br /><br />
+<div class="list-group;">
+<ul style="text-align:left;color:brown;">
+<li> Bill Payment </li>
+<li> View, Reserve and cancel hotel Rooms</li>
+<li> Pay Insurance Premium</li>
+<li> Bank to Bank fund transferring</li>
+<li> Check Bank balance</li>
+<li> View transaction log </li>
+    </ul>
+    </div> <br/>
         </div>
+       
+    </div>
 </asp:Content>

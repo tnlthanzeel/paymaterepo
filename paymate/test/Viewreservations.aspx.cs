@@ -75,11 +75,11 @@ namespace test
             }
 
 
-            catch (Exception ex)
+            catch (Exception )
             {
 
                 noid.Visible = true;
-                noid.Text = ex.ToString();
+               
             }
         }
     }

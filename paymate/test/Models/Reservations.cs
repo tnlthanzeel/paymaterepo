@@ -9,6 +9,7 @@ namespace test.Models
 {
     public class Reservations
     {
+        public int resid { get; set; }
         public string cusid { get; set; }
         public int roomno { get; set; }
         public DateTime cindate { get; set; }
@@ -40,21 +41,63 @@ namespace test.Models
             Transaction transaction = new Transaction()
             {
                 cusid = reservation.cusid,
-                type = string.Format( "Room Reserved At KingsBury | Room no: "+roomno+" | Res. Date: "+reservation.cindate.ToShortDateString()),
+                type = string.Format("Room Reserved At KingsBury | Room no: " + roomno + " | Res. Date: " + reservation.cindate.ToShortDateString()),
                 amount = paymentamount
             };
 
             transaction.update(transaction);
 
-           
+
 
         }
 
 
 
-        public void cancelreservation()
+        public bool cancelreservation(Reservations reservation)
         {
 
+            conString = ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
+            SqlConnection con = new SqlConnection(conString);
+
+
+            SqlCommand cmd = new SqlCommand("select * from reservation where id='" + reservation.resid + "'", con);
+            con.Open();
+            SqlDataReader rdr = cmd.ExecuteReader();
+            bool result = rdr.Read();
+
+            if (result == true)
+            {
+                roomno = int.Parse(rdr[2].ToString());
+                cindate = DateTime.Parse(rdr[3].ToString());
+            }
+            con.Close();
+
+            rdr.Close();
+            if (result == false)
+            {
+                return false;
+            }
+
+            else if (result == true)
+            {
+
+                con.Open();
+                cmd = new SqlCommand("update reservation set status='" + reservation.rstatus + "' where id='" + reservation.resid + "'", con);
+                cmd.ExecuteNonQuery();
+
+                Transaction transaction = new Transaction()
+                {
+                    cusid = reservation.cusid,
+                    type = string.Format($"Room reservation cancelled | Room no: {roomno} | Res date: {cindate}"),
+                    amount = 0
+                };
+
+                transaction.update(transaction);
+            }
+            rdr.Close();
+
+            con.Close();
+            return true;
         }
     }
 }

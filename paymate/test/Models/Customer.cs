@@ -136,11 +136,11 @@ namespace test.Models
 
 
         public DataTable cancelreservation(string cusid)
-       { 
+        {
             conString = ConfigurationManager.ConnectionStrings["paymatecontext"].ConnectionString;
             SqlConnection con = new SqlConnection(conString);
 
-            SqlCommand cmd = new SqlCommand("select id,dcusid,droomno,date from reservation where dcusid='" + cusid + "'", con);
+            SqlCommand cmd = new SqlCommand("select id,dcusid,droomno,date from reservation where dcusid='" + cusid + "' and status=0", con);
             con.Open();
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
             DataTable td = new DataTable();

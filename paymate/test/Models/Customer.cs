@@ -32,6 +32,7 @@ namespace test.Models
             con.Open();
             SqlDataReader rdr = cmd.ExecuteReader();
             bool useremailexists = rdr.Read();
+            rdr.Close();
             con.Close();
 
             if (useremailexists == false)
@@ -40,6 +41,34 @@ namespace test.Models
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
+
+
+
+                cmd = new SqlCommand("SELECT TOP 1 daccno FROM bankacc ORDER BY ID DESC", con);
+                con.Open();
+                rdr = cmd.ExecuteReader();
+                rdr.Read();
+                int tempaccno = Convert.ToInt32(rdr[0].ToString());
+                rdr.Close();
+                con.Close();
+                tempaccno++;
+
+
+
+                cmd = new SqlCommand("insert into bankacc values('" + newcustomer.CusId + "','" + tempaccno + "',10000)", con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+
+                cmd = new SqlCommand("insert into phonebill values('" + newcustomer.CusId + "','" + newcustomer.CusPhone + "',700)", con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+
+
+
                 return 0;// 0 means for register success 
             }
 

@@ -13,7 +13,7 @@ namespace test
         protected void Page_Load(object sender, EventArgs e)
         {
            
-            if (!string.IsNullOrEmpty(Session["loggedinas"] as string))
+            if (!string.IsNullOrEmpty(Session["loggedinas"] as string) && !string.IsNullOrEmpty(Session["cusid"] as string))
             {
                 cusidd.Text = Session["cusid"].ToString();
 

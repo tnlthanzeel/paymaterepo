@@ -48,6 +48,15 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-8 col-sm-offset-2 text">
+						<br />
+						<br />
+						<div style="align-content:center;font-size:larger;color:darkgray" class="  btn btn-default">
+							<a href="publicabout.aspx" style="color:blueviolet;">About</a>
+							</div>
+						<br />
+						<br />
+						<br />
+
 						<h1><strong>Welcome to PAYmate</strong> </h1>
 						<div class="description">
 							<p class="fa-paragraph">
@@ -60,7 +69,7 @@
 					<div class="col-sm-6 col-sm-offset-3 form-box">
 						<div class="form-top">
 							<div class="form-top-left">
-								<h3>Login to our PAYmate</h3>
+								<h3>Login to your PAYmate</h3>
 								<p>Enter your username and password to log on:</p>
 							</div>
 							<div class="form-top-right">

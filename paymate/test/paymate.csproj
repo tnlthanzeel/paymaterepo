@@ -307,6 +307,7 @@
     <Content Include="FundTrasferReport.aspx" />
     <Content Include="Mylog.aspx" />
     <Content Include="PayPhoneBill.aspx" />
+    <Content Include="publicabout.aspx" />
     <Content Include="ReservationReport.aspx" />
     <Content Include="Thekingsburry.aspx" />
     <Content Include="ViewHotels.aspx" />
@@ -531,6 +532,13 @@
       <DependentUpon>PayPhoneBill.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="publicabout.aspx.cs">
+      <DependentUpon>publicabout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publicabout.aspx.designer.cs">
+      <DependentUpon>publicabout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="register.aspx.cs">
       <DependentUpon>register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

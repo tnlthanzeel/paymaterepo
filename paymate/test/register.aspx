@@ -69,7 +69,7 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="emailId">Card Number</label>
                         <div class="col-md-6">
-                            <input id="cardno" name="cardno" type="number" runat="server" class="form-control input-md" required="required" />
+                            <input id="cardno" name="cardno" type="number" runat="server" class="form-control input-md" required="required" min="0" />
 
                         </div>
                     </div>

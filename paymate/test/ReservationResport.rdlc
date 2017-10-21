@@ -202,7 +202,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!date.Value</Value>
+                              <Value>=FormatDateTime(Fields!date.Value, DateFormat.ShortDate)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -223,6 +223,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -249,7 +250,7 @@
         <DataSetName>DataSet1</DataSetName>
         <Top>0.61333in</Top>
         <Left>1.62375in</Left>
-        <Height>0.84375in</Height>
+        <Height>0.84376in</Height>
         <Width>8.77083in</Width>
         <Style>
           <Border>

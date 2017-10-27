@@ -32,7 +32,7 @@
             <br />
             <br />
             <hr />
-            <center style="font: bold; font-size: large"><h1 style="color:firebrick;">About</h1><center> <hr/> <br /> <br />
+            <center style="font: bold; font-size: large"><h1 style="color:firebrick;">About</h1></center> <hr/> <br /> <br />
                
         <table >
             <tr>

@@ -53,7 +53,7 @@
         <br />
         <br />
         &nbsp;&nbsp; Enter Customer Id
-        <asp:TextBox ID="cusidd" runat="server" Width="200"></asp:TextBox>&nbsp;&nbsp;<asp:Button ID="search" runat="server" Text="Search" CssClass="btn btn-primary" OnClick="search_Click" />
+        <asp:TextBox ID="cusidd" runat="server" Width="200" ></asp:TextBox>&nbsp;&nbsp;<asp:Button ID="search" runat="server" Text="Search" CssClass="btn btn-primary" OnClick="search_Click" />
         <br />
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="blockuser" runat="server" Text="Block User" CssClass="btn btn-danger" OnClick="blockuser_Click" />&nbsp;&nbsp;<asp:Button ID="unblockuser" runat="server" Text="Unblock User" CssClass="btn btn-danger" OnClick="unblockuser_Click" />
@@ -79,7 +79,7 @@
             <SortedAscendingHeaderStyle BackColor="#6D95E1" />
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
-            </asp:GridView><center>
+            </asp:GridView></center>
                 <br />
     </form>
 
